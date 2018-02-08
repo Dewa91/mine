@@ -8,11 +8,9 @@ clear
 yum install -y epel-release
 
 #install package yang dibutuhkan
-yum -y install centos-release-scl cmake3 hwloc-devel libmicro httpd-devel openssl-devel git screen nano devtoolset-4-gcc*
-scl enable devtoolset-4 bash 
-
+yum -y install centos-release-scl cmake3 hwloc-devel libmicro httpd-devel openssl-devel git screen nano devtoolset-4-gcc*  
 sleep 1
-
+sudo scl enable devtoolset-4 bash
 git clone https://github.com/fireice-uk/xmr-stak-cpu.git
 cd xmr-stak-cpu
 cmake3 -DMICROHTTPD_ENABLE=OFF
