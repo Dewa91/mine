@@ -13,7 +13,7 @@ yum -y install centos-release-scl cmake3 hwloc-devel libmicro httpd-devel openss
 #setup xmr-stak-cpu mining
 git clone https://github.com/fireice-uk/xmr-stak-cpu.git
 cd xmr-stak-cpu
-cmake3 .
+cmake3 -DMICROHTTPD_ENABLE=OFF
 make install
 cd bin/
 rm -rf config.txt
