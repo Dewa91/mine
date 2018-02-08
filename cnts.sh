@@ -12,6 +12,8 @@ yum -y install centos-release-scl cmake3 hwloc-devel libmicro httpd-devel openss
 yum -y install devtoolset-4-gcc*
 scl enable devtoolset-4 bash
 
+echo "Installing xmr-stak-cpu"
+
 #setup xmr-stak-cpu mining
 git clone https://github.com/fireice-uk/xmr-stak-cpu.git
 cd xmr-stak-cpu
